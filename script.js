@@ -15,10 +15,10 @@ let SELECTED_PIECE = null;
 let START_TIME = null;
 let END_TIME = null;
 
-let SOUND = new Audio("bubblepop.mp3");
+let SOUND = new Audio("music/bubblepop.mp3");
 SOUND.volume = 0.3;
 
-let END_SOUND = new Audio("bubbling.mp3");
+let END_SOUND = new Audio("music/bubbling.mp3");
 END_SOUND.volume = 0.5;
 
 let AUDIO_CONTEXT = new (AudioContext || webkiAudioContext || window.

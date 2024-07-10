@@ -15,8 +15,8 @@ body {
     background: rgba(255, 255, 255, 0.6);
     text-align: center;
     padding: 5vmin;
-    border: 1vmin rgba(0, 0, 0, 0.6) solid;
-    border-radius: 6px;
+    border: 1vmin solid rgb(94, 94, 94);
+    border-radius: 2vmin;
 }
 
 #container {
@@ -34,7 +34,7 @@ body {
     justify-content: center;
     position: relative;
     border: 2px dashed #e9ba00;
-    border-radius: 8px;
+    border-radius: 1.2vmin;
     box-sizing: border-box;
     font-size: 22px;
 }
@@ -56,7 +56,7 @@ body {
     font-size: 7vmin;
     background-color: #58a8ea;
     color: whitesmoke;
-    border-radius: 6px;
+    border-radius: 1.22vmin;
     cursor: pointer;
 }
 
@@ -108,18 +108,28 @@ select {
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    font-size: 3.6vmin;
     font-weight: bold;
 }
 
 #retry-button {
-    background-color: #5db1f5;
+    background-color: #e57373;
     color: #ffffff;
-    font-size: 4vmin;
 }
 
 #retry-button:hover {
-    background-color: #ea6f6f;
+    background-color: #d32f2f;
 }
+
+#other-game-button {
+    background-color: #64b5f6;
+    color: #ffffff;
+}
+
+#other-game-button:hover {
+    background-color: #1976d2;
+}
+
 
 /* 모바일 대응 */
 @media only screen and (max-width: 768px) {
@@ -154,6 +164,10 @@ select {
     }
 
     #retry-button {
+        font-size: 5.6vmin;
+    }
+
+    #other-game-button {
         font-size: 5.6vmin;
     }
 
