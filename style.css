@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    overscroll-behavior: none;
+    /* background-color: rgba(155, 197, 212, 0.8); */
+    background-color: white;
+}
+
+#menuItems {
+    width: 82vmin;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding: 5vmin;
+    border: 1vmin rgba(0, 0, 0, 0.6) solid;
+    border-radius: 6px;
+}
+
+#container {
+    margin-bottom: 4vmin;
+}
+
+#dropZone {
+    width: 100%;
+    padding: 36px 10px;
+    margin: 0 auto;
+    display: flex;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 2px dashed #e9ba00;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 22px;
+}
+
+#dropZone:hover {
+    background-color: #fff5cc;
+}
+
+#controls {
+    margin-bottom: 0.6vmin;
+}
+
+#Difficulty {
+    font-size: 24px;
+}
+
+#startButton {
+    text-align: center;
+    font-size: 7vmin;
+    background-color: #58a8ea;
+    color: whitesmoke;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#startButton:hover {
+    background-color: #ea6f6f;
+    color: whitesmoke;
+}
+
+select {
+    font-size: 7vmin;
+    cursor: pointer;
+    border: none;
+    border-radius: 1vmin;
+    outline: nones;
+}
+
+#time {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    display: none;
+    /* 초기에는 오버레이를 숨김 */
+    z-index: 10;
+}
+
+#overlay p {
+    margin: 0 auto 20px;
+    font-size: 32px;
+}
+
+#overlay button {
+    margin: 10px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#retry-button {
+    background-color: #5db1f5;
+    color: #ffffff;
+    font-size: 4vmin;
+}
+
+#retry-button:hover {
+    background-color: #ea6f6f;
+}
+
+/* 모바일 대응 */
+@media only screen and (max-width: 768px) {
+
+    #body {
+        width: 100%;
+    }
+
+    #menuItems {
+        width: 86vmin;
+        box-sizing: border-box;
+    }
+
+    #controls {
+        margin-bottom: 0;
+    }
+
+    #dropZone {
+        font-size: 18px;
+    }
+
+    #Difficulty {
+        font-size: 20px;
+    }
+
+    #startButton {
+        padding: 3px 12px;
+    }
+
+    #overlay p {
+        font-size: 24px;
+    }
+
+    #retry-button {
+        font-size: 5.6vmin;
+    }
+
+}
