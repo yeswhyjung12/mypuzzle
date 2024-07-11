@@ -113,6 +113,7 @@ function restart() {
     END_TIME = null;
     randomizePices();
     document.getElementById("menuItems").style.display = "none";
+    document.getElementById("langs").style.display = "none";
     document.getElementById("overlay").style.display = "none"; // 오버레이를 숨김
 }
 

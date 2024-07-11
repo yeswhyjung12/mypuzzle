@@ -6,8 +6,18 @@ body {
     background-color: white;
 }
 
+#langs {
+    position: absolute;
+    top: 3vmin;
+    right: 12vmin;
+}
+
+#languageSelector {
+    font-size: 3.6vmin;
+}
+
 #menuItems {
-    width: 82vmin;
+    width: 60%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -15,8 +25,11 @@ body {
     background: rgba(255, 255, 255, 0.6);
     text-align: center;
     padding: 5vmin;
-    border: 1vmin solid rgb(94, 94, 94);
+    border: 1vmin solid #e9ba00;
+    /* border: 1vmin none; */
     border-radius: 2vmin;
+    box-sizing: border-box;
+    z-index: 200;
 }
 
 #container {
@@ -25,7 +38,7 @@ body {
 
 #dropZone {
     width: 100%;
-    padding: 36px 10px;
+    padding: 48px 10px;
     margin: 0 auto;
     display: flex;
     cursor: pointer;
@@ -36,7 +49,7 @@ body {
     border: 2px dashed #e9ba00;
     border-radius: 1.2vmin;
     box-sizing: border-box;
-    font-size: 22px;
+    font-size: 3.2vmin;
 }
 
 #dropZone:hover {
@@ -58,6 +71,8 @@ body {
     color: whitesmoke;
     border-radius: 1.22vmin;
     cursor: pointer;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 #startButton:hover {
@@ -108,11 +123,11 @@ select {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 3.6vmin;
     font-weight: bold;
 }
 
 #retry-button {
+    font-size: 3.6vmin;
     background-color: #e57373;
     color: #ffffff;
 }
@@ -122,6 +137,7 @@ select {
 }
 
 #other-game-button {
+    font-size: 3.6vmin;
     background-color: #64b5f6;
     color: #ffffff;
 }
@@ -130,6 +146,15 @@ select {
     background-color: #1976d2;
 }
 
+#textField {
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    height: auto;
+    background-color: yellow;
+    z-index: 100;
+
+}
 
 /* 모바일 대응 */
 @media only screen and (max-width: 768px) {
@@ -138,8 +163,17 @@ select {
         width: 100%;
     }
 
+    #langs {
+        top: 5vmin;
+        right: 6vmin;
+    }
+
+    #languageSelector {
+        font-size: 4.2vmin;
+    }
+
     #menuItems {
-        width: 86vmin;
+        width: 90vmin;
         box-sizing: border-box;
     }
 
@@ -149,6 +183,7 @@ select {
 
     #dropZone {
         font-size: 18px;
+        padding: 24px 10px;
     }
 
     #Difficulty {
@@ -157,18 +192,19 @@ select {
 
     #startButton {
         padding: 3px 12px;
+        left: 50%;
     }
 
     #overlay p {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     #retry-button {
-        font-size: 5.6vmin;
+        font-size: 5vmin;
     }
 
     #other-game-button {
-        font-size: 5.6vmin;
+        font-size: 5vmin;
     }
 
 }

@@ -25,10 +25,9 @@
         </div>
         <div id="menu">
             <div id="controls">
-                <img src="images/mypuzzle_logo.png" style="width: 50%;" />
+                <img src="images/mypuzzle_logo.png" style="width: 80%;" />
                 <br>
-                <span data-i18n="difficulty" style="font-size: 2.6vmin;">난이도</span> <select id="Difficulty"
-                    onchange="setDifficulty()">
+                <span data-i18n="difficulty">난이도</span> <select id="Difficulty" onchange="setDifficulty()">
                     <option value="easy" data-i18n="easy">쉬움</option>
                     <option value="medium" data-i18n="medium">중간</option>
                     <option value="hard" data-i18n="hard">어려움</option>
@@ -47,9 +46,6 @@
         <button id="retry-button" onclick="resetGame()" data-i18n="restart">재시작</button>
         <button id="other-game-button" onclick="otherGame()" data-i18n="mainMenu">메인으로</button>
     </div>
-
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.6/platform.min.js"></script>
     <script src="script.js"></script>
     <script src="i18n.js"></script>
