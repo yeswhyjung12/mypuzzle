@@ -24,12 +24,6 @@ END_SOUND.volume = 0.5;
 let AUDIO_CONTEXT = new (AudioContext || webkiAudioContext || window.
     AudioContext)();
 
-let keys = {
-    DO: 261.6,
-    RE: 293.7,
-    MI: 329.6
-}
-
 function main() {
     CANVAS = document.getElementById("myCanvas");
     CONTEXT = CANVAS.getContext("2d");
@@ -213,7 +207,7 @@ function onMouseUp() {
             setTimeout(playMelody, 300);
             setTimeout(() => {
                 document.getElementById("overlay").style.display = "flex"; // 오버레이를 표시
-            }, 1000); // 1초 지연
+            }, 900); // 0.9초 지연
         }
     }
     SELECTED_PIECE = null;
@@ -270,7 +264,7 @@ function updateGame() {
     CONTEXT.strokeRect(SIZE.x, SIZE.y, SIZE.width, SIZE.height);
 
     // 이미지 그리기
-    CONTEXT.globalAlpha = 0.5;
+    CONTEXT.globalAlpha = 0.4;
     CONTEXT.drawImage(IMAGE,
         SIZE.x, SIZE.y,
         SIZE.width, SIZE.height);
