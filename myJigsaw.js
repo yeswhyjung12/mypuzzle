@@ -9,20 +9,35 @@ if (platform.os.family === 'Android' || platform.os.family === 'iOS') {
     // PC인 경우
     SCALER = 0.6;
 }
-let SIZE = { x: 0, y: 0, width: 0, height: 0, rows: 3, columns: 3 };
+let SIZE = { x: 0, y: 0, width: 0, height: 0, rows: 2, columns: 2 };
 let PIECES = [];
 let SELECTED_PIECE = null;
 let START_TIME = null;
 let END_TIME = null;
 
 let SOUND = new Audio("music/bubblepop.mp3");
-SOUND.volume = 0.3;
+SOUND.volume = 0.5;
 
 let END_SOUND = new Audio("music/bubbling.mp3");
 END_SOUND.volume = 0.5;
 
-let AUDIO_CONTEXT = new (AudioContext || webkiAudioContext || window.
-    AudioContext)();
+let AUDIO_CONTEXT;
+
+function startAudio() {
+    // Create the AudioContext after a user gesture
+    if (!AUDIO_CONTEXT) {
+        AUDIO_CONTEXT = new (AudioContext || window.AudioContext)();
+    }
+
+    // Resume the AudioContext if it is suspended
+    if (AUDIO_CONTEXT.state === 'suspended') {
+        AUDIO_CONTEXT.resume();
+    }
+
+    // Start playing the sound
+    SOUND.play();
+}
+
 
 function main() {
     CANVAS = document.getElementById("myCanvas");
@@ -88,16 +103,16 @@ function setDifficulty() {
     let diff = document.getElementById("Difficulty").value;
     switch (diff) {
         case "easy":
-            initializePices(3, 3);
+            initializePices(2, 2);
             break;
         case "medium":
-            initializePices(5, 5);
+            initializePices(4, 4);
             break;
         case "hard":
-            initializePices(8, 8);
+            initializePices(6, 6);
             break;
         case "challange":
-            initializePices(16, 16);
+            initializePices(10, 10);
             break;
     }
 }
@@ -109,6 +124,8 @@ function restart() {
     document.getElementById("menuItems").style.display = "none";
     document.getElementById("langs").style.display = "none";
     document.getElementById("overlay").style.display = "none"; // 오버레이를 숨김
+    SOUND.currentTime = 0;
+    SOUND.play();
 }
 
 function updateTime() {
@@ -152,8 +169,10 @@ function addEventListener() {
     CANVAS.addEventListener("mousedown", onMouseDown);
     CANVAS.addEventListener("mousemove", onMouseMove);
     CANVAS.addEventListener("mouseup", onMouseUp);
-    CANVAS.addEventListener("touchstart", onTouchStart);
-    CANVAS.addEventListener("touchmove", onTouchMove);
+    CANVAS.addEventListener("touchstart", onTouchStart, { passive: true });
+    CANVAS.addEventListener("touchmove", onTouchMove, { passive: true });
+    //CANVAS.addEventListener("touchstart", onTouchStart,);
+    //CANVAS.addEventListener("touchmove", onTouchMove,);
     CANVAS.addEventListener("touchend", onTouchEnd);
 }
 
@@ -353,7 +372,7 @@ class Piece {
 
 
         const sz = Math.min(this.width, this.height);
-        const neck = 0.1 * sz;
+        const neck = 0.08 * sz;
         const tabWidth = 0.2 * sz;
         const tabHeight = 0.2 * sz;
 
@@ -543,7 +562,7 @@ function playNote(key, duration) {
 }
 
 function resetGame() {
-    restart();
+    location.reload();
 }
 
 
