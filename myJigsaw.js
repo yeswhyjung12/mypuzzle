@@ -566,7 +566,7 @@ function resetGame() {
 }
 
 function otherGame() {
-    window.location.href = 'https://enjoyingpuzzle.netlify.app/';
+    window.location.href = 'https://playpuzzle.netlify.app/';
 }
 
 function playMelody() {
