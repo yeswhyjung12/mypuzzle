@@ -16,10 +16,10 @@ let START_TIME = null;
 let END_TIME = null;
 
 let SOUND = new Audio("music/bubblepop.mp3");
-SOUND.volume = 0.8;
+SOUND.volume = 1;
 
-let END_SOUND = new Audio("music/bubbling.mp3");
-END_SOUND.volume = 1;
+let END_SOUND = new Audio("music/bubbling_resound.mp3");
+END_SOUND.volume = 0.8;
 
 let AUDIO_CONTEXT;
 
