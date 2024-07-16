@@ -16,10 +16,10 @@ let START_TIME = null;
 let END_TIME = null;
 
 let SOUND = new Audio("music/bubblepop.mp3");
-SOUND.volume = 0.5;
+SOUND.volume = 0.8;
 
 let END_SOUND = new Audio("music/bubbling.mp3");
-END_SOUND.volume = 0.5;
+END_SOUND.volume = 1;
 
 let AUDIO_CONTEXT;
 
@@ -372,7 +372,7 @@ class Piece {
 
 
         const sz = Math.min(this.width, this.height);
-        const neck = 0.08 * sz;
+        const neck = 0.07 * sz;
         const tabWidth = 0.2 * sz;
         const tabHeight = 0.2 * sz;
 
@@ -565,6 +565,9 @@ function resetGame() {
     location.reload();
 }
 
+function otherGame() {
+    window.location.href = 'https://enjoyingpuzzle.netlify.app/';
+}
 
 function playMelody() {
     END_SOUND.play();

@@ -64,6 +64,10 @@ body {
     width: 50%;
 }
 
+#questionDif {
+    font-size: 3.2vmin;
+}
+
 #Difficulty {
     font-size: 24px;
 }
@@ -71,12 +75,13 @@ body {
 #startButton {
     text-align: center;
     font-size: 7vmin;
+    font-weight: 700;
     background-color: #58a8ea;
     color: whitesmoke;
     border-radius: 1.22vmin;
     cursor: pointer;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 7px;
+    padding-right: 9px;
 }
 
 #startButton:hover {
@@ -118,21 +123,21 @@ select {
 
 #overlay p {
     margin: 0 auto 20px;
-    font-size: 32px;
+    font-size: 5.2vmin;
 }
 
 #overlay button {
     margin: 10px;
-    padding: 12px 24px;
+    padding: 15px 30px;
     border: none;
-    border-radius: 6px;
+    border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
 }
 
 #retry-button {
-    font-size: 3.6vmin;
     background-color: #e57373;
+    font-size: 3.2vmin;
     color: #ffffff;
 }
 
@@ -141,8 +146,8 @@ select {
 }
 
 #other-game-button {
-    font-size: 3.6vmin;
     background-color: #64b5f6;
+    font-size: 3.2vmin;
     color: #ffffff;
 }
 
@@ -176,13 +181,17 @@ select {
     }
 
     #controls img {
-        width: 60%;
+        width: 72%;
     }
-    
+
 
     #dropZone {
         font-size: 18px;
         padding: 24px 10px;
+    }
+
+    #questionDif {
+        font-size: 4vmin;
     }
 
     #Difficulty {
@@ -190,12 +199,12 @@ select {
     }
 
     #startButton {
-        padding: 3px 12px;
+        padding: 3px 14px 4px 13px;
         left: 50%;
     }
 
     #overlay p {
-        font-size: 22px;
+        font-size: 7vmin;
     }
 
     #retry-button {

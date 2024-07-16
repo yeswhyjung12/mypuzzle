@@ -21,7 +21,7 @@ const translations = {
     difficulty: "난이도",
     start: "시작",
     restart: "재시작",
-    mainMenu: "메인으로"
+    mainMenu: "다른 퍼즐"
   }
 };
 
