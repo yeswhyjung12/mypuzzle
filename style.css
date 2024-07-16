@@ -13,7 +13,7 @@ body {
 }
 
 #languageSelector {
-    font-size: 3.6vmin;
+    font-size: 3.2vmin;
 }
 
 #menuItems {
@@ -26,7 +26,7 @@ body {
     text-align: center;
     padding: 5vmin;
     border: 1vmin solid white;
-    /* border: 1vmin none; */
+    /* border: none; */
     border-radius: 2vmin;
     box-sizing: border-box;
     z-index: 200;
