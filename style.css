@@ -159,7 +159,7 @@ select {
     width: 320px;
     margin: 0 auto;
     position: relative;
-    bottom: 100px;
+    top: -10px;
 }
 
 /* 모바일 대응 */
